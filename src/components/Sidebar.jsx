@@ -1,5 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
+import tape_recorder from '../assets/tape-recorder.png'
 import calendar from "../assets/calendar.png";
 import clipboard from "../assets/clipboard.png";
 import folder from "../assets/folder.png";
@@ -16,10 +17,7 @@ const Sidebar = () => {
     <aside className="sidebar">
       <div className="logo">
         <div className="logo-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m12 3 7 4.1v8L12 19l-7-3.9v-8L12 3Z" />
-            <path d="m5 7.1 7 4 7-4M12 11v8" />
-          </svg>
+         <img src={tape_recorder} alt="" />
         </div>
 
         <div>

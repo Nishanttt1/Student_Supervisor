@@ -76,20 +76,119 @@
   font-size: 14px;
   font-weight: 700;
 }
-@media (max-width: 520px) {
-  .page-header {
-    padding: 13px 18px;
-  }
-  .add-project {
-    padding: 0 12px;
-  }
-  .add-project span {
-    display: none;
-  }
-  .notification {
-    margin-left: 8px;
-  }
-  .page-header > .profile {
-    margin-left: 8px;
-  }
+
+.project-portfolio{
+    display: flex;
+    justify-content: space-between;
+  padding: 20px;
+  margin: 17px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgb(49, 46, 129), rgb(79, 70, 229)); 
+  height: 120px;
+
+}
+
+.portfolio-details span {
+   color: #bef0d0;
+
+   
+}
+
+.portfolio-details h2{
+    color: #e9e6eb;
+    margin-top: 10px;
+}
+
+.portfolio-details p{
+    color: #bebcc6;
+    font-size: 12px;
+}
+
+.portfolio-count{
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+.portfolio-count strong{
+    color: #e4e1e9;
+    font-size: 33px;
+    margin-left: auto;
+
+}
+
+.portfolio-count span{
+    color: #eae9ef;
+    margin-left: auto;
+    font-size: 13px;
+}
+
+.body-details{
+    min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 20, 35, 0.45) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.create-modal{
+  position: relative;
+  width: min(520px, calc(100% - 32px));
+  padding: 28px;
+  border-radius: 20px;
+  background: white;
+}
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+.create-modal input,
+.create-modal textarea,
+.create-modal select {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid #dedee9;
+  border-radius: 14px;
+  font: inherit;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.create-btn {
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 12px;
+  background: #625df5;
+  color: white;
+  cursor: pointer;
+}
+
+.cancel{
+  padding: 4px;
+  border-radius: 14px;
 }
