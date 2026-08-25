@@ -1,5 +1,4 @@
 import React from "react";
-import tapeRecorder from "../assets/tape-recorder.png";
 import "./Sidebar.css";
 import calendar from "../assets/calendar.png";
 import clipboard from "../assets/clipboard.png";
@@ -10,14 +9,17 @@ import notification from "../assets/notification.png";
 import feedback from "../assets/feedback.png";
 import dashboard from "../assets/dashboard.png";
 import online_resource from "../assets/online-resource.png";
-import chevron from '../assets/chevron.png'
+import chevron from "../assets/chevron.png";
 
 const Sidebar = () => {
   return (
     <aside className="sidebar">
       <div className="logo">
         <div className="logo-icon">
-          <img src={tapeRecorder} alt="Tape recorder logo" />
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m12 3 7 4.1v8L12 19l-7-3.9v-8L12 3Z" />
+            <path d="m5 7.1 7 4 7-4M12 11v8" />
+          </svg>
         </div>
 
         <div>
@@ -33,7 +35,7 @@ const Sidebar = () => {
           <ul>
             <li>
               {" "}
-              <img className="icon" src={dashboard} alt="" /> Dashbord
+              <img className="icon" src={dashboard} alt="" /> Dashboard
             </li>
             <li>
               <img className="icon" src={folder} alt="" /> My Projects
@@ -66,15 +68,13 @@ const Sidebar = () => {
       <div className="profile">
         <div className="profile-img">RR</div>
 
-         <div className="profile-data">
-        <strong>Resh Raj</strong>
-        <span>Final Year .CS</span>
-        <span> <img className="profile-icon" src={chevron} alt="" />
-        </span>
-      </div>
-      </div>
+        <div className="profile-data">
+          <strong>Resh Raj</strong>
+          <span>Final Year · CS</span>
+        </div>
 
-      
+        <div><img className="profile-icon" src={chevron} alt="" /></div>
+      </div>
     </aside>
   );
 };

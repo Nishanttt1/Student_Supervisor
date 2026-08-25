@@ -1,15 +1,14 @@
-import { useState } from 'react'
 import Sidebar from './components/Sidebar'
+import Projects from './components/Projects'
 
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-       <Sidebar/>
-    </>
+    <main className="app-shell">
+      <Sidebar />
+      <Projects />
+    </main>
   )
 }
 export default App;

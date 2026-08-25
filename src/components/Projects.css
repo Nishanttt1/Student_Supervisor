@@ -1,0 +1,95 @@
+.project-page {
+  flex: 1;
+  min-width: 0;
+  background: #fdfcfb;
+}
+.page-header {
+  display: flex;
+  align-items: center;
+  min-height: 81px;
+  padding: 13px 36px;
+  border-bottom: 1px solid #e9e6eb;
+}
+.header-text span {
+  display: block;
+  margin-bottom: 2px;
+  color: #777291;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.35px;
+}
+.header-text h1 {
+  color: #25243a;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.add-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  margin-left: auto;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 13px;
+  background: #7057f4;
+  box-shadow: 0 5px 12px rgba(98, 71, 224, 0.18);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.add-project span {
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1;
+}
+.notification {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  margin-left: 13px;
+  border: 1px solid #e4e1e9;
+  border-radius: 13px;
+  background: #fff;
+  cursor: pointer;
+}
+.notification img {
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+}
+.page-header > .profile {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  margin-left: 14px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #7258ef;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+@media (max-width: 520px) {
+  .page-header {
+    padding: 13px 18px;
+  }
+  .add-project {
+    padding: 0 12px;
+  }
+  .add-project span {
+    display: none;
+  }
+  .notification {
+    margin-left: 8px;
+  }
+  .page-header > .profile {
+    margin-left: 8px;
+  }
+}
