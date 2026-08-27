@@ -40,6 +40,11 @@
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.add-project:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(98, 71, 224, 0.25);
 }
 .add-project span {
   font-size: 23px;
@@ -152,6 +157,7 @@
   padding: 28px;
   border-radius: 20px;
   background: white;
+  box-shadow: 0 24px 60px rgba(20, 20, 35, 0.24);
 }
 .close-modal {
   position: absolute;
@@ -191,7 +197,10 @@
 }
 
 .cancel{
-  padding: 4px;
+  padding: 12px 20px;
+  border: 1px solid #dedee9;
+  background: #fff;
+  cursor: pointer;
   border-radius: 14px;
 }
 
@@ -208,6 +217,11 @@
   border-radius: 14px;
   background: #fff;
   box-shadow: 0 4px 12px rgba(30, 25, 70, 0.06);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(30, 25, 70, 0.1);
 }
 
 .project-card h3 {
