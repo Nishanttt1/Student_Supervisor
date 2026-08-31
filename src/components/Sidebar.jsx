@@ -1,6 +1,6 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
-import tape_recorder from '../assets/tape-recorder.png'
+import tape_recorder from "../assets/tape-recorder.png";
 import calendar from "../assets/calendar.png";
 import clipboard from "../assets/clipboard.png";
 import folder from "../assets/folder.png";
@@ -17,7 +17,7 @@ const Sidebar = () => {
     <aside className="sidebar">
       <div className="logo">
         <div className="logo-icon">
-         <img src={tape_recorder} alt="" />
+          <img src={tape_recorder} alt="" />
         </div>
 
         <div>
@@ -41,7 +41,9 @@ const Sidebar = () => {
               </NavLink>
             </li>
             <li>
-              <img className="icon" src={clipboard} alt="" /> Tasks
+              <NavLink to='/task' className="menu-link">
+                <img className="icon" src={clipboard} alt="" /> Tasks
+              </NavLink>{" "}
             </li>
             <li>
               <img className="icon" src={resume} alt="" /> Submissions
@@ -75,7 +77,9 @@ const Sidebar = () => {
           <span>Final Year · CS</span>
         </div>
 
-        <div><img className="profile-icon" src={chevron} alt="" /></div>
+        <div>
+          <img className="profile-icon" src={chevron} alt="" />
+        </div>
       </div>
     </aside>
   );
