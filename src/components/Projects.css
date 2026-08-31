@@ -25,6 +25,10 @@
   font-weight: 600;
   line-height: 28px;
 }
+
+.create-btn{
+  margin-right: 10px;
+}
 .add-project {
   display: inline-flex;
   align-items: center;
@@ -34,6 +38,7 @@
   padding: 0 18px;
   border: 0;
   border-radius: 13px;
+  margin-right: 12px;
   background: #7057f4;
   box-shadow: 0 5px 12px rgba(98, 71, 224, 0.18);
   color: #fff;
@@ -80,6 +85,7 @@
   color: #fff;
   font-size: 14px;
   font-weight: 700;
+  margin-bottom: 4px;
 }
 
 .project-portfolio{

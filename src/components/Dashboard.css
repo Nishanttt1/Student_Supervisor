@@ -1,20 +1,24 @@
-.task {
+.dashboard {
   min-height: 100vh;
   background: #fdfcfb;
 }
-
-.task header {
+.dashboard header {
   display: flex;
   align-items: center;
   min-height: 81px;
   padding: 13px 36px;
   border-bottom: 1px solid #e9e6eb;
 }
+.star {
+  width: 27px;
+  height: 27px;
+  margin-left: 4px;
+  transform: translateY(5px);
+}
 .title-right {
   display: flex;
   margin-left: auto;
 }
-
 .title-left h2 {
   color: #25243a;
   font-family: "Playfair Display", Georgia, serif;
@@ -31,8 +35,7 @@
   font-weight: 500;
   letter-spacing: 0.35px;
 }
-
-.task .notification {
+.dashboard .notification {
   display: grid;
   width: 42px;
   height: 42px;
@@ -44,13 +47,13 @@
   cursor: pointer;
 }
 
-.task .notification img {
+.dashboard .notification img {
   width: 19px;
   height: 19px;
   object-fit: contain;
 }
 
-.task .profile {
+.dashboard .profile {
   display: grid;
   width: 42px;
   height: 42px;

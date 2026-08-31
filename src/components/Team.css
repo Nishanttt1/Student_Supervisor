@@ -45,7 +45,7 @@
   text-align: center;
 }
 
-.team-header .notification {
+.notification {
   display: grid;
   width: 42px;
   height: 42px;

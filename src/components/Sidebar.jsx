@@ -32,8 +32,9 @@ const Sidebar = () => {
         <div className="menu-item">
           <ul>
             <li>
-              {" "}
-              <img className="icon" src={dashboard} alt="" /> Dashboard
+              <NavLink to='/dashboard' className='menu-link'>
+                <img className="icon" src={dashboard} alt="" /> Dashboard
+              </NavLink>
             </li>
             <li>
               <NavLink to="/projects" className="menu-link">
@@ -41,7 +42,7 @@ const Sidebar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to='/task' className="menu-link">
+              <NavLink to="/task" className="menu-link">
                 <img className="icon" src={clipboard} alt="" /> Tasks
               </NavLink>{" "}
             </li>

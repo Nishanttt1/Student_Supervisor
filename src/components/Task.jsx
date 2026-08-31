@@ -1,20 +1,24 @@
-import React from 'react';
-import './Task.css';
+import React from "react";
+import notification from '../assets/notification.png'
+import "./Task.css";
 
 const Task = () => {
   return (
-    <div className='task'>
+    <div className="task">
       <header>
-      <div className='title-left'>
+        <div className="title-left">
           <span>PROJECT WORK</span>
-        <h2>Tasks</h2>
+          <h2>Tasks</h2>
+        </div>
+        <div className="title-right">
+          <button className="notification">
+            <img src={notification} alt="" />
+          </button>
 
-      </div>
-     
-
+          <button className="profile">RR</button>
+        </div>
       </header>
-
     </div>
-  )
-}
+  );
+};
 export default Task;
