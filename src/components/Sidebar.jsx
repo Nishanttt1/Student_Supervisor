@@ -32,7 +32,7 @@ const Sidebar = () => {
         <div className="menu-item">
           <ul>
             <li>
-              <NavLink to='/dashboard' className='menu-link'>
+              <NavLink to="/dashboard" className="menu-link">
                 <img className="icon" src={dashboard} alt="" /> Dashboard
               </NavLink>
             </li>
@@ -47,10 +47,15 @@ const Sidebar = () => {
               </NavLink>{" "}
             </li>
             <li>
-              <img className="icon" src={resume} alt="" /> Submissions
+              <NavLink  to="/submission" className="menu-link">
+                <img className="icon" src={resume} alt="" /> Submissions
+              </NavLink>{" "}
             </li>
             <li>
-              <img className="icon" src={feedback} alt="" /> Supervisor Feedback
+              <NavLink  to="/feedback" className="menu-link">
+                <img className="icon" src={feedback} alt="" /> Supervisor
+                Feedback
+              </NavLink>{" "}
             </li>
             <li>
               <NavLink to="/team" className="menu-link">
@@ -58,13 +63,19 @@ const Sidebar = () => {
               </NavLink>
             </li>
             <li>
-              <img className="icon" src={calendar} alt="" /> Calendar
+              <NavLink  to="/calendar" className="menu-link">
+                <img className="icon" src={calendar} alt="" /> Calendar
+              </NavLink>{" "}
             </li>
             <li>
-              <img className="icon" src={online_resource} alt="" /> Resources
+              <NavLink  to="/resource" className="menu-link">
+                <img className="icon" src={online_resource} alt="" /> Resources
+              </NavLink>{" "}
             </li>
             <li>
-              <img className="icon" src={notification} alt="" /> Notifications
+              <NavLink  to="/notification" className="menu-link">
+                <img className="icon" src={notification} alt="" /> Notifications
+              </NavLink>{" "}
             </li>
           </ul>
         </div>

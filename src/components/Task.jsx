@@ -11,6 +11,13 @@ const Task = () => {
           <h2>Tasks</h2>
         </div>
         <div className="title-right">
+          
+        <button
+          className="add-project"
+          onClick={() => setShowCreateModal(true)}
+        >
+          <span>+</span> Create Task
+        </button>
           <button className="notification">
             <img src={notification} alt="" />
           </button>

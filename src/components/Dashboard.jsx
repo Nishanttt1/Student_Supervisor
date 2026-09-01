@@ -14,6 +14,14 @@ const Dashboard = () => {
             </div>
 
             <div className="title-right">
+
+              
+        <button
+          className="add-project"
+          onClick={() => setShowCreateModal(true)}
+        >
+          <span>+</span> New Task
+        </button>
                       <button className="notification">
                         <img src={notification} alt="" />
                       </button>
