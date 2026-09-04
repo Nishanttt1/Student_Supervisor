@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 import tape_recorder from "../assets/tape-recorder.png";
@@ -13,8 +14,24 @@ import online_resource from "../assets/online-resource.png";
 import chevron from "../assets/chevron.png";
 
 const Sidebar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  
+
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${menuOpen ? "menu-open" : ""}`}>
+      <button
+        className="menu-toggle"
+        type="button"
+        aria-expanded={menuOpen}
+        aria-controls="sidebar-navigation"
+        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+        onClick={() => setMenuOpen((isOpen) => !isOpen)}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+
       <div className="logo">
         <div className="logo-icon">
           <img src={tape_recorder} alt="" />
@@ -28,7 +45,60 @@ const Sidebar = () => {
 
       <p className="sidebar-title">STUDENT PORTAL</p>
 
-      <nav>
+      <div className="menu-overlay" aria-hidden={!menuOpen}>
+        <div className="overlay-wordmark">AcademiQ</div>
+        <button
+          className="overlay-close"
+          type="button"
+          aria-label="Close navigation menu"
+          onClick={() => setMenuOpen(false)}
+        >
+          <span />
+          <span />
+        </button>
+        <div className="overlay-navigation">
+          <nav aria-label="Main navigation">
+            <NavLink to="/dashboard" onClick={() => setMenuOpen(false)}>
+              Dashboard
+            </NavLink>
+            <NavLink to="/projects" onClick={() => setMenuOpen(false)}>
+              My Projects
+            </NavLink>
+            <NavLink to="/task" onClick={() => setMenuOpen(false)}>
+              Tasks
+            </NavLink>
+            <NavLink to="/submission" onClick={() => setMenuOpen(false)}>
+              Submissions
+            </NavLink>
+            <NavLink to="/feedback" onClick={() => setMenuOpen(false)}>
+              Supervisor Feedback
+            </NavLink>
+            <NavLink to="/team" onClick={() => setMenuOpen(false)}>
+              Team
+            </NavLink>
+            <NavLink to="/calendar" onClick={() => setMenuOpen(false)}>
+              Calendar
+            </NavLink>
+            <NavLink to="/resource" onClick={() => setMenuOpen(false)}>
+              Resources
+            </NavLink>
+            <NavLink to="/notification" onClick={() => setMenuOpen(false)}>
+              Notifications
+            </NavLink>
+          </nav>
+        </div>
+      
+      </div>
+
+      <nav
+        id="sidebar-navigation"
+        className="sidebar-navigation"
+        onClick={(event) => {
+          if (event.target.closest(".menu-link")) {
+            setMenuOpen(false);
+          }
+        }}
+      >
         <div className="menu-item">
           <ul>
             <li>
@@ -47,12 +117,12 @@ const Sidebar = () => {
               </NavLink>{" "}
             </li>
             <li>
-              <NavLink  to="/submission" className="menu-link">
+              <NavLink to="/submission" className="menu-link">
                 <img className="icon" src={resume} alt="" /> Submissions
               </NavLink>{" "}
             </li>
             <li>
-              <NavLink  to="/feedback" className="menu-link">
+              <NavLink to="/feedback" className="menu-link">
                 <img className="icon" src={feedback} alt="" /> Supervisor
                 Feedback
               </NavLink>{" "}
@@ -63,17 +133,17 @@ const Sidebar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink  to="/calendar" className="menu-link">
+              <NavLink to="/calendar" className="menu-link">
                 <img className="icon" src={calendar} alt="" /> Calendar
               </NavLink>{" "}
             </li>
             <li>
-              <NavLink  to="/resource" className="menu-link">
+              <NavLink to="/resource" className="menu-link">
                 <img className="icon" src={online_resource} alt="" /> Resources
               </NavLink>{" "}
             </li>
             <li>
-              <NavLink  to="/notification" className="menu-link">
+              <NavLink to="/notification" className="menu-link">
                 <img className="icon" src={notification} alt="" /> Notifications
               </NavLink>{" "}
             </li>

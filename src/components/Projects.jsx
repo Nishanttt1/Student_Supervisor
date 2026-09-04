@@ -36,26 +36,29 @@ const Projects = () => {
   };
 
   return (
-    <div className="project-page">
-      <div className="page-header">
-        <div className="header-text">
-          <span>CURRENT SEMESTER</span>
-          <h1>My Projects</h1>
+    <div className="project">
+      <header className="page-header">
+          <div className="title-left">
+           <span>CURRENT SEMESTER</span>
+          <h2>My Projects</h2>
         </div>
+         
 
-        <button
-          className="add-project"
-          onClick={() => setShowCreateModal(true)}
-        >
-          <span>+</span> Create Project
-        </button>
-
-        <button className="notification">
-          <img src={notification} alt="" />
-        </button>
-
-        <button className="profile">RR</button>
-      </div>
+       <div className="title-right">
+                 
+               <button
+                 className="add-project"
+                 onClick={() => setShowCreateModal(true)}
+               >
+                 <span>+</span> Create Project
+               </button>
+                 <button className="notification-logo">
+                   <img src={notification} alt="" />
+                 </button>
+       
+                 <button className="profile-logo">RR</button>
+               </div>
+      </header>
 
       <div className="project-portfolio">
         <div className="portfolio-details">
