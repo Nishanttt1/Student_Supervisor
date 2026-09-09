@@ -16,6 +16,11 @@ const Login = () => {
     navigate("/dashboard");
   };
 
+
+  const handleSignUP =() =>{
+    navigate("/signup");
+  }
+
   return (
     <div className="login-page">
       <header className="login-header">
@@ -28,7 +33,9 @@ const Login = () => {
         </div>
 
         <div className="header-right">
-          <button className="sign-up">Sign Up for free</button>
+          <button className="sign-up" onClick={handleSignUP}>
+            Sign Up for free
+          </button>
 
           <button className="login" type="button" onClick={handleSignIn}>
             Sign In
@@ -55,7 +62,9 @@ const Login = () => {
               Login
             </button>
 
-            <button className="sign">Sign Up</button>
+            <button className="sign" onClick={handleSignUP}>
+              Sign Up
+            </button>
           </div>
         </div>
 
