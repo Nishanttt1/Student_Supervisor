@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import tape_recorder from "../assets/tape-recorder.png";
 import dashboard_img from "../assets/content/dashboard_img.png";
@@ -12,14 +12,19 @@ import "./Login.css";
 const Login = () => {
   const navigate = useNavigate();
 
+  const [showLogin, setShowLogin] = useState(false);
+
   const handleSignIn = () => {
-    navigate("/dashboard");
+    setShowLogin(true);
   };
 
-
-  const handleSignUP =() =>{
+  const handleSignUP = () => {
     navigate("/signup");
-  }
+  };
+  const handleSigninSubmit = (e) => {
+    e.preventDefault();
+    navigate("/dashboard");
+  };
 
   return (
     <div className="login-page">
@@ -59,7 +64,7 @@ const Login = () => {
 
           <div className="login-buttons">
             <button className="log" type="button" onClick={handleSignIn}>
-              Login
+              Sign In
             </button>
 
             <button className="sign" onClick={handleSignUP}>
@@ -99,6 +104,56 @@ const Login = () => {
           </div>
         </div>
       </main>
+
+      {showLogin && (
+        <div className="login-overlay">
+          <div className="login-modal">
+            <button className="close-login" onClick={() => setShowLogin(false)}>
+              X
+            </button>
+
+            <h2 className="login-welcome">Welcome-back</h2>
+            <p className="login-subtitle">Please enter your details</p>
+            <form action="">
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="login-input"
+                required
+              />
+
+              <input
+                type="password"
+                placeholder="Password"
+                className="login-input"
+                required
+              />
+
+              <div className="login-options">
+                <label htmlFor="" className="remember">
+                  <input type="checkbox" name="" id="" />
+                  <span>Remember for 30 days</span>
+                </label>
+
+                
+              </div>
+              <button type="submit" className="modal-signin">
+                Sign In
+              </button>
+            </form>
+
+            <button className="google-login">
+              <span className="google-icon">G</span>
+              <span>Sign in with Google</span>
+            </button>
+
+            <p className="modal-signup">
+              Don't have an account?
+              <button onClick={handleSignUP}>Sign Up</button>
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
