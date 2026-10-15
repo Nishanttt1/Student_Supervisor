@@ -25,7 +25,8 @@ const Login = () => {
     e.preventDefault();
     navigate("/dashboard");
   };
-
+  
+  
   return (
     <div className="login-page">
       <header className="login-header">

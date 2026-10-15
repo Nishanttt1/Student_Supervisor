@@ -17,11 +17,12 @@ body {
 button {
   font: inherit;
 }
-
+a
 .title-right {
   display: flex;
   margin-left: auto;
 }
+
 .title-left h2 {
   color: #25243a;
   font-family: "Playfair Display", Georgia, serif;

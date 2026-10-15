@@ -1,0 +1,156 @@
+.feedback {
+  min-height: 100vh;
+  background: #fdfcfb;
+}
+
+.feedback-list {
+  display: grid;
+  gap: 14px;
+  padding: 21px 28px 30px;
+}
+
+.feedback-card {
+  display: flex;
+  align-items: flex-start;
+  min-height: 140px;
+  padding: 21px;
+  border: 1px solid #eeebed;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(39, 32, 69, 0.04);
+}
+
+.feedback-icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  place-items: center;
+  margin-right: 14px;
+  border-radius: 11px;
+}
+
+.feedback-icon span {
+  position: relative;
+  display: block;
+  width: 14px;
+  height: 11px;
+  border: 1.8px solid currentColor;
+  border-radius: 2px;
+}
+
+.feedback-icon span::after {
+  position: absolute;
+  right: 1px;
+  bottom: -5px;
+  width: 5px;
+  height: 5px;
+  border-right: 1.8px solid currentColor;
+  border-bottom: 1.8px solid currentColor;
+  content: "";
+  transform: skewY(-35deg);
+}
+
+.feedback-icon.red {
+  background: #fff0f0;
+  color: #ff5d5d;
+}
+.feedback-icon.green {
+  background: #eafaf4;
+  color: #10be8d;
+}
+.feedback-icon.orange {
+  background: #fff7e8;
+  color: #f3a000;
+}
+
+.feedback-content {
+  min-width: 0;
+  padding-top: 1px;
+}
+
+.feedback-content h3 {
+  color: #18172f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.feedback-author {
+  margin-top: 5px;
+  color: #aaa5bd;
+  font-size: 12px;
+}
+
+.feedback-message {
+  margin-top: 13px;
+  color: #777291;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.feedback-actions {
+  margin-top: 10px;
+  color: #aaa5bd;
+  font-size: 10px;
+}
+
+.feedback-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  padding-left: 20px;
+}
+
+.feedback-status,
+.feedback-score {
+  display: grid;
+  min-width: 61px;
+  height: 40px;
+  place-items: center;
+  border-radius: 22px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.feedback-status.red {
+  background: #fff0f0;
+  color: #f14d4d;
+}
+.feedback-status.green {
+  background: #eaf8f3;
+  color: #09a974;
+}
+.feedback-status.orange {
+  background: #fff7e8;
+  color: #ee9900;
+}
+.feedback-score {
+  min-width: 40px;
+  background: #f0f1ff;
+  color: #6558ed;
+}
+
+@media (max-width: 720px) {
+  .feedback-list {
+    padding: 16px;
+  }
+
+  .feedback-card {
+    flex-wrap: wrap;
+    padding: 17px;
+  }
+
+  .feedback-content {
+    flex: 1;
+  }
+
+  .feedback-summary {
+    width: 100%;
+    justify-content: flex-end;
+    padding-top: 14px;
+    padding-left: 54px;
+  }
+}

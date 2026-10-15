@@ -151,6 +151,28 @@ const Signup = () => {
                     </select>
                   </span>
                 </label>
+
+                <label className="signup-field">
+                  Program
+                  <span className="signup-input-wrap">
+                    <span className="signup-input-icon">
+                      <GraduationCapIcon />
+                    </span>
+                    <select
+                      required
+                      name="section"
+                      defaultValue=""
+                      className="signup-input signup-select"
+                    >
+                      <option value="" disabled>
+                        Select Program
+                      </option>
+                      <option value="A">Bsc.CSIT</option>
+                      <option value="B">BIT</option>
+                      <option value="C">BCA</option>
+                    </select>
+                  </span>
+                </label>
               </div>
 
               <PasswordField
@@ -268,6 +290,18 @@ const UserIcon = () => (
   >
     <circle cx="12" cy="8" r="3.5" />
     <path d="M5 20c.7-3.3 3-5 7-5s6.3 1.7 7 5" />
+  </svg>
+);
+const GraduationCapIcon = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    className="signup-icon"
+  >
+    <path d="m3 9 9-4 9 4-9 4-9-4Z" />
+    <path d="M7 11.2V16c2.8 2.4 7.2 2.4 10 0v-4.8M21 9v6" />
   </svg>
 );
 const MailIcon = () => (
